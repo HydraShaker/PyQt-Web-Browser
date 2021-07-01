@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.browser = QWebEngineView()
-        self.browser.setUrl(QUrl('https://search.yahoo.com/?guccounter=1'))
+        self.browser.setUrl(QUrl('https://google.com/search?q='))
         self.setCentralWidget(self.browser)
         self.showMaximized()
 
@@ -44,7 +44,7 @@ class MainWindow(QMainWindow):
         self.browser.urlChanged.connect(self.update_url)
 
     def navigate_home(self):
-        self.browser.setUrl(QUrl('https://search.yahoo.com/?guccounter=1'))
+        self.browser.setUrl(QUrl('https://google.com/search?q='))
 
     def navigate_url(self):
         url = self.url_bar.text()
