@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 import sys
 from PyQt5.QtWebKitWidgets import QtWebView,QWebPage
-from PyQt5.QtWebKit import *)
+from PyQt5.QtWebKit import *
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -53,6 +53,6 @@ class MainWindow(QMainWindow):
         self.url_bar.setText(url.toString())
 
 app = QApplication(sys.argv)
-QApplication.setApplicationName("Resolve")
+QApplication.setApplicationName("Web")
 window = MainWindow()
 app.exec_()
