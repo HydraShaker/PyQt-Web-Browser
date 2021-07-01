@@ -1,14 +1,13 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 import sys
-from PyQt5.QtWebEngineWidgets import *
-
-print('Importing Modules')
+from PyQt5.QtWebKitWidgets import QtWebView,QWebPage
+from PyQt5.QtWebKit import *)
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.browser = QWebEngineView()
+        self.browser = QWebView()
         self.browser.setUrl(QUrl('https://google.com/search?q='))
         self.setCentralWidget(self.browser)
         self.showMaximized()
@@ -23,12 +22,12 @@ class MainWindow(QMainWindow):
         navbar.addAction(home_btn)
 
         #Backpage button
-        back_btn = QAction('Backpage', self)
+        back_btn = QAction('<=', self)
         back_btn.triggered.connect(self.browser.back)
         navbar.addAction(back_btn)
 
         #Forwardpage button
-        forward_btn = QAction('Forward', self)
+        forward_btn = QAction('=>', self)
         forward_btn.triggered.connect(self.browser.forward)
         navbar.addAction(forward_btn)
 
